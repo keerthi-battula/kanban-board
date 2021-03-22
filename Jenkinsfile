@@ -10,12 +10,12 @@ pipeline{
         //         bat "docker rm kanban-ui"
         //     }
         // }
-        stage("docker build"){
-            steps{
-                bat "docker-compose up -d"
-            }
-        }
-
+       // stage("docker build"){
+         //   steps{
+         //       bat "docker-compose up -d"
+         //   }
+       // }
+/*
         stage("commiting the deocker images"){
             steps{
                 bat "docker commit kanban-ui bharathvelisala/challenge-ui"
@@ -31,7 +31,7 @@ pipeline{
                 }
             }
         }
-
+*/
         stage("kubernates"){
             steps{
                 bat "kubectl apply -f api-deployment.yml"
