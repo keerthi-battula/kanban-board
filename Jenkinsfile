@@ -5,10 +5,10 @@ pipeline{
 
         stage("kubernates"){
             steps{
-                bat "kubectl apply -f api-deployment.yml"
-                 bat "kubectl apply -f ui-deployment.yml"
-                 bat "kubectl apply -f database-deployment.yml"
-                 bat "kubectl apply -f autoscaling.yml"
+                sh "kubectl apply -f api-deployment.yml"
+                 sh "kubectl apply -f ui-deployment.yml"
+                 sh "kubectl apply -f database-deployment.yml"
+                 sh "kubectl apply -f autoscaling.yml"
             }
         }
     }
